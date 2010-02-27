@@ -10,6 +10,11 @@
     <copyfile src="core/root.mk" dest="Makefile"/>
   </project>
 
+  <project path="cm-kernel"
+           name="cyanogen/cm-kernel"
+           revision="android-2.6.29-eclair"
+	   remote="github"/>
+
   <project path="bionic" name="cyanogen/android_bionic" remote="github" />
 
   <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy"/>
@@ -186,6 +191,7 @@
 
   <project path="vendor/google/passion" name="cyanogen/android_vendor_google_passion" remote="github" />
   <project path="vendor/motorola/sholes-open" name="koush/android_vendor_motorola_sholes-open" remote="github" revision="master" />
+  <project path="vendor/htc/hero" name="koush/android_vendor_htc_hero" remote="github" revision="eclair" />
 
   <project path="vendor/qcom/android-open" name="platform/vendor/qcom/android-open" revision="master" />
   <project path="vendor/qcom/proprietary-open" name="platform/vendor/qcom/proprietary-open" revision="master" />
@@ -194,7 +200,13 @@
 
   <project path="vendor/aosp" name="platform/vendor/aosp" revision="master" />
   <project path="vendor/cyanogen" name="cyanogen/android_vendor_cyanogen" remote="github" />
+  <project path="vendor/koush" name="koush/android_vendor_koush" remote="github" />
   <project path="vendor/sample" name="platform/vendor/sample" revision="master" />
 
   <project path="cts" name="platform/cts" />
 </manifest>
+
+<!-- Local Variables: *** -->
+<!-- mode: xml *** -->
+<!-- fill-column: 200*** -->
+<!-- End: *** -->
