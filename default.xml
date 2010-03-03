@@ -1,15 +1,46 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <manifest>
   <remote name="korg" fetch="git://android.git.kernel.org/" review="review.source.android.com"/>
+<<<<<<< snowfix
   <remote name="github" fetch="git://github.com/" />
   <remote name="gitorious" fetch="git://gitorious.org" />
 
   <default revision="eclair" remote="korg"/>
 
   <project path="build" name="cyanogen/android_build" remote="github">
+=======
+  <remote name="caf" fetch="git://codeaurora.org/" />
+  <remote name="github" fetch="git://github.com/" />
+  <remote name="gitorious" fetch="git://gitorious.org" />
+
+  <!-- Steve Kondik - CyanogenMod - http://wiki.cyanogenmod.com/index.php/Main_Page -->
+  <remote name="cyanogen" fetch="git://github.com/cyanogen/" />
+  <!-- Koushik Dutta - http://www.koushikdutta.com/ -->
+  <remote name="koush" fetch="git://github.com/koush/" />
+  <!-- LoX - KaguDroid - http://code.google.com/p/kagudroid/ -->
+  <remote name="lox" fetch="git://github.com/loxK/" />
+  <!-- others -->
+  <remote name="chainsdd" fetch="git://github.com/ChainsDD/" />
+  <remote name="kruton" fetch="git://github.com/kruton/" />
+  <remote name="fries" fetch="git://github.com/fries/" />
+
+  <default revision="eclair" remote="korg"/>
+
+  <project path="build" name="android_build" remote="cyanogen">
+>>>>>>> local
     <copyfile src="core/root.mk" dest="Makefile"/>
   </project>
+  <!-- <project path="build" name="KaguDroid_build" remote="lox"> -->
+  <!--   <copyfile src="core/root.mk" dest="Makefile"/> -->
+  <!-- </project> -->
 
+  <project path="kernel" name="kernel/common" revision="android-2.6.27" remote="korg"/>
+  <project path="kernel-msm" name="kernel/msm" revision="android-msm-2.6.27" remote="korg"/>
+  <!-- <project path="kernel-msm" name="cm-kernel" revision="android-msm-2.6.33" remote="cyanogen"/> -->
+  <project path="kernel-lox-2.6.29-hero" name="android-msm-2.6.29-hero" revision="eclair" remote="lox"/>
+  <project path="kernel-lox-2.6.27-hero" name="android-msm-2.6.27-hero" revision="eclair" remote="lox"/>
+
+<<<<<<< snowfix
   <project path="cm-kernel"
            name="cyanogen/cm-kernel"
            revision="android-2.6.29-eclair"
@@ -42,12 +73,58 @@
   <project path="system/core" name="cyanogen/android_system_core" remote="github" />
   <project path="system/extras" name="cyanogen/android_system_extras" remote="github" />
   <project path="system/wlan/ti" name="platform/system/wlan/ti"/>
+=======
+  <project path="bionic" name="android_bionic" remote="cyanogen" />
+
+  <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy"/>
+  <project path="bootable/diskinstaller" name="platform/bootable/diskinstaller"/>
+  <!-- <project path="bootable/recovery" name="platform/bootable/recovery" /> -->
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="koush" />
+
+  <!-- <project path="dalvik" name="platform/dalvik" /> -->
+  <project path="dalvik" name="android_dalvik" remote="cyanogen" />
+  <!-- <project path="development" name="platform/development" /> -->
+  <project path="development" name="android_development" remote="cyanogen" />
+  <!-- <project path="frameworks/base" name="platform/frameworks/base" /> -->
+  <project path="frameworks/base" name="android_frameworks_base" remote="cyanogen" />
+  <!-- <project path="frameworks/base" name="KaguDroid_frameworks_base" remote="lox" /> -->
+  <project path="frameworks/opt/com.google.android" name="platform/frameworks/opt/com.google.android"/>
+  <project path="frameworks/opt/com.google.android.googlelogin" name="platform/frameworks/opt/com.google.android.googlelogin"/>
+  <project path="frameworks/opt/emoji" name="platform/frameworks/opt/emoji"/>
+  <!-- <project path="frameworks/policies/base" name="platform/frameworks/policies/base" /> -->
+  <project path="frameworks/policies/base" name="android_frameworks_policies_base" remote="cyanogen" />
+  <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" />
+  <project path="hardware/htc/dream" name="platform/hardware/htc/dream" revision="master"/>
+  <project path="hardware/htc/mahimahi" name="android_hardware_mahimahi" remote="chainsdd" revision="master" />
+  <project path="hardware/libhardware" name="platform/hardware/libhardware"/>
+  <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy"/>
+  <project path="hardware/ril" name="platform/hardware/ril"/>
+  <!-- <project path="hardware/msm7k" name="platform/hardware/msm7k" /> -->
+  <project path="hardware/msm7k" name="android_hardware_msm7k" remote="cyanogen" />
+  <project path="hardware/qcom/gps" name="platform/hardware/qcom/gps" revision="master" />
+>>>>>>> local
   <project path="hardware/ti/omap3" name="platform/hardware/ti/omap3" />
   <project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" />
   <project path="sdk" name="platform/sdk" />
 
+<<<<<<< snowfix
   <project path="packages/providers/ApplicationsProvider" name="platform/packages/providers/ApplicationsProvider"/>
   <project path="packages/providers/CalendarProvider" name="cyanogen/android_packages_providers_CalendarProvider" remote="github" />
+=======
+  <project path="prebuilt" name="platform/prebuilt"/>
+
+  <project path="system/bluetooth" name="platform/system/bluetooth" />
+  <!-- <project path="system/core" name="platform/system/core" /> -->
+  <project path="system/core" name="android_system_core" remote="cyanogen" />
+  <!-- <project path="system/extras" name="platform/system/extras" /> -->
+  <project path="system/extras" name="android_system_extras" remote="cyanogen" />
+  <project path="system/wlan/ti" name="platform/system/wlan/ti"/>
+
+
+  <project path="packages/providers/ApplicationsProvider" name="platform/packages/providers/ApplicationsProvider"/>
+  <!-- <project path="packages/providers/CalendarProvider" name="platform/packages/providers/CalendarProvider" /> -->
+  <project path="packages/providers/CalendarProvider" name="android_packages_providers_CalendarProvider" remote="cyanogen" />
+>>>>>>> local
   <project path="packages/providers/ContactsProvider" name="platform/packages/providers/ContactsProvider"/>
   <project path="packages/providers/DownloadProvider" name="platform/packages/providers/DownloadProvider" />
   <project path="packages/providers/DrmProvider" name="platform/packages/providers/DrmProvider"/>
@@ -62,6 +139,7 @@
 
   <project path="packages/apps/AlarmClock" name="cyanogen/android_packages_apps_AlarmClock" remote="github" />
   <project path="packages/apps/Bluetooth" name="platform/packages/apps/Bluetooth" />
+<<<<<<< snowfix
   <project path="packages/apps/Browser" name="cyanogen/android_packages_apps_Browser" remote="github" />
   <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" />
   <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar"/>
@@ -90,6 +168,48 @@
   <project path="packages/apps/Sync" name="platform/packages/apps/Sync"/>
   <project path="packages/apps/Updater" name="platform/packages/apps/Updater"/>
   <project path="packages/apps/VoiceDialer" name="platform/packages/apps/VoiceDialer"/>
+=======
+  <!-- <project path="packages/apps/Browser" name="platform/packages/apps/Browser" /> -->
+  <project path="packages/apps/Browser" name="android_packages_apps_Browser" remote="cyanogen" />
+  <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" />
+  <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" />
+  <!-- <project path="packages/apps/Camera" name="platform/packages/apps/Camera" /> -->
+  <project path="packages/apps/Camera" name="android_packages_apps_Camera" remote="cyanogen" />
+  <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" />
+  <!-- <project path="packages/apps/Contacts" name="platform/packages/apps/Contacts" /> -->
+  <project path="packages/apps/Contacts" name="android_packages_apps_Contacts" remote="cyanogen" />
+  <!-- <project path="packages/apps/DeskClock" name="platform/packages/apps/DeskClock" /> -->
+  <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" remote="cyanogen" />
+  <project path="packages/apps/Email" name="platform/packages/apps/Email" />
+  <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" />
+  <!-- <project path="packages/apps/Gallery3D" name="platform/packages/apps/Gallery3D" /> -->
+  <project path="packages/apps/Gallery3D" name="android_packages_apps_Gallery3D" remote="cyanogen" />
+  <project path="packages/apps/GlobalSearch" name="platform/packages/apps/GlobalSearch" />
+  <project path="packages/apps/GoogleSearch" name="platform/packages/apps/GoogleSearch" />
+  <project path="packages/apps/HTMLViewer" name="platform/packages/apps/HTMLViewer" />
+  <project path="packages/apps/IM" name="platform/packages/apps/IM" />
+  <!-- <project path="packages/apps/Launcher" name="platform/packages/apps/Launcher" /> -->
+  <!-- <project path="packages/apps/Launcher" name="android_packages_apps_Launcher" remote="cyanogen" /> -->
+  <project path="packages/apps/Launcher" name="KaguDroid_packages_apps_Launcher" remote="lox" />
+  <!-- <project path="packages/apps/Launcher2" name="platform/packages/apps/Launcher2" /> -->
+  <project path="packages/apps/Launcher2" name="android_packages_apps_Launcher2" remote="cyanogen" />
+  <!-- <project path="packages/apps/Mms" name="platform/packages/apps/Mms" /> -->
+  <project path="packages/apps/Mms" name="android_packages_apps_Mms" remote="cyanogen" />
+  <!-- <project path="packages/apps/Music" name="platform/packages/apps/Music" /> -->
+  <project path="packages/apps/Music" name="android_packages_apps_Music" remote="cyanogen" />
+  <project path="packages/apps/PackageInstaller" name="platform/packages/apps/PackageInstaller" />
+  <!-- <project path="packages/apps/Phone" name="platform/packages/apps/Phone" /> -->
+  <project path="packages/apps/Phone" name="android_packages_apps_Phone" remote="cyanogen" />
+  <project path="packages/apps/Provision" name="platform/packages/apps/Provision" revision="master" />
+  <!-- <project path="packages/apps/Settings" name="platform/packages/apps/Settings" /> -->
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="cyanogen" />
+  <project path="packages/apps/SoundRecorder" name="platform/packages/apps/SoundRecorder" />
+  <project path="packages/apps/Stk" name="platform/packages/apps/Stk" />
+  <project path="packages/apps/Superuser" name="android_packages_apps_Superuser" remote="cyanogen" />
+  <project path="packages/apps/Sync" name="platform/packages/apps/Sync" />
+  <project path="packages/apps/Updater" name="platform/packages/apps/Updater" />
+  <project path="packages/apps/VoiceDialer" name="platform/packages/apps/VoiceDialer" />
+>>>>>>> local
 
   <project path="packages/inputmethods/LatinIME" name="platform/packages/inputmethods/LatinIME"/>
   <project path="packages/inputmethods/OpenWnn" name="platform/packages/inputmethods/OpenWnn"/>
@@ -103,6 +223,7 @@
   <project path="packages/wallpapers/MagicSmoke" name="platform/packages/wallpapers/MagicSmoke" />
   <project path="packages/wallpapers/MusicVisualization" name="platform/packages/wallpapers/MusicVisualization" />
 
+<<<<<<< snowfix
   <project path="external/aes" name="platform/external/aes"/>
   <project path="external/apache-http" name="platform/external/apache-http"/>
   <project path="external/astl" name="platform/external/astl"/>
@@ -130,6 +251,36 @@
   <project path="external/fdlibm" name="platform/external/fdlibm"/>
   <project path="external/flac" name="kruton/android_external_flac" revision="master" remote="github" />
   <project path="external/freetype" name="platform/external/freetype"/>
+=======
+  <project path="external/aes" name="platform/external/aes" />
+  <project path="external/apache-http" name="platform/external/apache-http" />
+  <project path="external/astl" name="platform/external/astl" />
+  <project path="external/bison" name="platform/external/bison" />
+  <project path="external/blktrace" name="platform/external/blktrace" />
+  <project path="external/bluetooth/bluez" name="platform/external/bluetooth/bluez" />
+  <project path="external/bluetooth/glib" name="platform/external/bluetooth/glib" />
+  <project path="external/bluetooth/hcidump" name="platform/external/bluetooth/hcidump" />
+  <project path="external/busybox" name="android_external_busybox" remote="cyanogen" revision="master" />
+  <project path="external/bsdiff" name="platform/external/bsdiff" />
+  <project path="external/bzip2" name="platform/external/bzip2" />
+  <project path="external/clearsilver" name="platform/external/clearsilver" />
+  <project path="external/dbus" name="platform/external/dbus" />
+  <project path="external/dhcpcd" name="platform/external/dhcpcd" />
+  <project path="external/dosfstools" name="platform/external/dosfstools" />
+  <project path="external/dnsmasq" name="android_external_dnsmasq" remote="cyanogen" />
+  <!-- <project path="external/dropbear" name="platform/external/dropbear" /> -->
+  <project path="external/dropbear" name="android_external_dropbear" remote="cyanogen" />
+  <project path="external/e2fsprogs" name="platform/external/e2fsprogs" />
+  <project path="external/elfcopy" name="platform/external/elfcopy" />
+  <project path="external/elfutils" name="platform/external/elfutils" />
+  <project path="external/embunit" name="platform/external/embunit" />
+  <project path="external/emma" name="platform/external/emma" />
+  <project path="external/esd" name="platform/external/esd" />
+  <project path="external/expat" name="platform/external/expat" />
+  <project path="external/fdlibm" name="platform/external/fdlibm" />
+  <project path="external/flac" name="android_external_flac" revision="master" remote="kruton" />
+  <project path="external/freetype" name="platform/external/freetype" />
+>>>>>>> local
   <project path="external/fsck_msdos" name="platform/external/fsck_msdos" />
   <project path="external/gdata" name="platform/external/gdata"/>
   <project path="external/giflib" name="platform/external/giflib"/>
@@ -145,16 +296,26 @@
   <project path="external/jpeg" name="platform/external/jpeg"/>
   <project path="external/junit" name="platform/external/junit"/>
   <project path="external/kernel-headers" name="platform/external/kernel-headers" />
+<<<<<<< snowfix
   <project path="external/lcc" name="platform/external/lcc"/>
   <project path="external/libffi" name="platform/external/libffi"/>
   <project path="external/libpcap" name="platform/external/libpcap"/>
   <project path="external/libpng" name="platform/external/libpng"/>
   <project path="external/libxml2" name="platform/external/libxml2"/>
   <project path="external/lzo" name="fries/android-external-liblzo" revision="master" remote="github" />
+=======
+  <project path="external/lcc" name="platform/external/lcc" />
+  <project path="external/libffi" name="platform/external/libffi" />
+  <project path="external/libpcap" name="platform/external/libpcap" />
+  <project path="external/libpng" name="platform/external/libpng" />
+  <project path="external/libxml2" name="platform/external/libxml2" />
+  <project path="external/lzo" name="android-external-liblzo" revision="master" remote="fries" />
+>>>>>>> local
   <project path="external/mtpd" name="platform/external/mtpd"/>
   <project path="external/netcat" name="platform/external/netcat"/>
   <project path="external/netperf" name="platform/external/netperf"/>
   <project path="external/neven" name="platform/external/neven"/>
+<<<<<<< snowfix
   <project path="external/opencore" name="cyanogen/android_external_opencore" remote="github" />
   <project path="external/openssl" name="cyanogen/android_external_openssl" revision="master" remote="github" />
   <project path="external/openvpn" name="cyanogen/android-external-openvpn" remote="github" />
@@ -168,6 +329,25 @@
   <project path="external/skia" name="cyanogen/android_external_skia" remote="github" />
   <project path="external/sonivox" name="platform/external/sonivox"/>
   <project path="external/speex" name="platform/external/speex"/>
+=======
+  <!-- <project path="external/opencore" name="platform/external/opencore" /> -->
+  <project path="external/opencore" name="android_external_opencore" remote="cyanogen" />
+  <!-- <project path="external/openssl" name="platform/external/openssl" /> -->
+  <project path="external/openssl" name="android_external_openssl" revision="master" remote="cyanogen" />
+  <!-- <project path="external/openvpn" name="platform/external/openvpn" /> -->
+  <project path="external/openvpn" name="android-external-openvpn" remote="cyanogen" />
+  <project path="external/oprofile" name="platform/external/oprofile" />
+  <project path="external/ping" name="platform/external/ping" />
+  <project path="external/ppp" name="platform/external/ppp" />
+  <project path="external/proguard" name="platform/external/proguard" />
+  <project path="external/protobuf" name="platform/external/protobuf" />
+  <project path="external/qemu" name="platform/external/qemu" />
+  <project path="external/safe-iop" name="platform/external/safe-iop" />
+  <!-- <project path="external/skia" name="platform/external/skia" /> -->
+  <project path="external/skia" name="android_external_skia" remote="cyanogen" />
+  <project path="external/sonivox" name="platform/external/sonivox" />
+  <project path="external/speex" name="platform/external/speex" />
+>>>>>>> local
   <project path="external/sqlite" name="platform/external/sqlite" />
   <project path="external/srec" name="platform/external/srec"/>
   <project path="external/strace" name="platform/external/strace"/>
@@ -175,6 +355,7 @@
   <project path="external/tagsoup" name="platform/external/tagsoup"/>
   <project path="external/tcpdump" name="platform/external/tcpdump"/>
   <project path="external/tesseract" name="platform/external/tesseract" />
+<<<<<<< snowfix
   <project path="external/tinyxml" name="platform/external/tinyxml"/>
   <project path="external/tremor" name="platform/external/tremor"/>
   <project path="external/webkit" name="cyanogen/android_external_webkit" remote="github" />
@@ -183,11 +364,24 @@
   <project path="external/xmlwriter" name="platform/external/xmlwriter" />
   <project path="external/yaffs2" name="koush/android_external_yaffs2" remote="github" />
   <project path="external/zlib" name="platform/external/zlib"/>
+=======
+  <project path="external/tinyxml" name="platform/external/tinyxml" />
+  <project path="external/tremor" name="platform/external/tremor" />
+  <!-- <project path="external/webkit" name="platform/external/webkit" /> -->
+  <project path="external/webkit" name="android_external_webkit" remote="cyanogen" />
+  <project path="external/wpa_supplicant" name="platform/external/wpa_supplicant" />
+  <project path="external/xdelta3" name="platform/external/xdelta3" />
+  <project path="external/xmlwriter" name="platform/external/xmlwriter" />
+  <!-- <project path="external/yaffs2" name="platform/external/yaffs2" /> -->
+  <project path="external/yaffs2" name="android_external_yaffs2" remote="koush" />
+  <project path="external/zlib" name="platform/external/zlib" />
+>>>>>>> local
 
   <project path="vendor/htc/common-open" name="platform/vendor/htc/common-open" revision="master" />
   <project path="vendor/htc/dream-open" name="platform/vendor/htc/dream-open" revision="master" />
   <project path="vendor/htc/prebuilt-open" name="platform/vendor/htc/prebuilt-open" revision="master" />
   <project path="vendor/htc/sapphire-open" name="platform/vendor/htc/sapphire-open" revision="master" />
+<<<<<<< snowfix
 
   <project path="vendor/google/passion" name="cyanogen/android_vendor_google_passion" remote="github" />
   <project path="vendor/motorola/sholes-open" name="koush/android_vendor_motorola_sholes-open" remote="github" revision="master" />
@@ -202,6 +396,26 @@
   <project path="vendor/cyanogen" name="cyanogen/android_vendor_cyanogen" remote="github" />
   <project path="vendor/koush" name="koush/android_vendor_koush" remote="github" />
   <project path="vendor/sample" name="platform/vendor/sample" revision="master" />
+=======
+
+  <project path="vendor/google/passion" name="android_vendor_google_passion" remote="cyanogen" />
+  <project path="vendor/motorola/sholes-open" name="android_vendor_motorola_sholes-open" remote="koush" revision="master" />
+  <project path="vendor/htc/hero" name="android_vendor_htc_hero" remote="lox" revision="eclair" />
+  <!-- <project path="vendor/htc/hero" name="android_vendor_htc_hero" remote="koush" revision="eclair" /> -->
+
+  <project path="vendor/qcom/android-open" name="platform/vendor/qcom/android-open" revision="master" />
+  <project path="vendor/qcom/proprietary-open" name="platform/vendor/qcom/proprietary-open" revision="master" />
+
+  <project path="vendor/pv-open" name="platform/vendor/pv-open" revision="master" />
+
+  <project path="vendor/aosp" name="platform/vendor/aosp" revision="master" />
+  <project path="vendor/sample" name="platform/vendor/sample" revision="master" />
+
+  <project path="vendor/cyanogen" name="android_vendor_cyanogen" remote="cyanogen" />
+  <project path="vendor/koush" name="android_vendor_koush" remote="koush" />
+  <project path="vendor/lox" name="android_vendor_lox" remote="lox" />
+  <project path="vendor/community" name="android_vendor_community" remote="lox" />
+>>>>>>> local
 
   <project path="cts" name="platform/cts" />
 </manifest>
