@@ -36,8 +36,8 @@
   <project path="kernel" name="kernel/common" revision="android-2.6.27" remote="korg"/>
   <project path="kernel-msm" name="kernel/msm" revision="android-msm-2.6.27" remote="korg"/>
   <!-- <project path="kernel-msm" name="cm-kernel" revision="android-msm-2.6.33" remote="cyanogen"/> -->
-  <project path="kernel-lox-2.6.29-hero" name="android-msm-2.6.29-hero" revision="eclair" remote="lox"/>
-  <project path="kernel-lox-2.6.27-hero" name="android-msm-2.6.27-hero" revision="eclair" remote="lox"/>
+  <project path="kernel-lox-2.6.29-hero" name="android-msm-2.6.29-hero" remote="lox"/>
+  <project path="kernel-lox-2.6.27-hero" name="android-msm-2.6.27-hero" remote="lox"/>
 
   <!-- <project path="bionic" name="platform/bionic" /> -->
   <project path="bionic" name="android_bionic" remote="cyanogen" />
