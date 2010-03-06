@@ -23,9 +23,12 @@
   <!-- <project path="build" name="platform/build"> -->
   <!--   <copyfile src="core/root.mk" dest="Makefile" /> -->
   <!-- </project> -->
-  <project path="build" name="android_build" remote="cyanogen">
+  <project path="build" name="android_build" remote="snowfix">
     <copyfile src="core/root.mk" dest="Makefile"/>
   </project>
+  <!-- <project path="build" name="android_build" remote="cyanogen"> -->
+  <!--   <copyfile src="core/root.mk" dest="Makefile"/> -->
+  <!-- </project> -->
   <!-- <project path="build" name="android_build" remote="koush"> -->
   <!--   <copyfile src="core/root.mk" dest="Makefile"/> -->
   <!-- </project> -->
