@@ -71,8 +71,10 @@
   <project path="frameworks/policies/base" name="android_frameworks_policies_base" remote="cyanogen" />
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" />
   <project path="hardware/htc/dream" name="platform/hardware/htc/dream" revision="master"/>
-  <project path="hardware/libhardware" name="platform/hardware/libhardware"/>
-  <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy"/>
+  <!-- <project path="hardware/libhardware" name="platform/hardware/libhardware"/> -->
+  <project path="hardware/libhardware" name="platform_hardware_libhardware" remote="snowfix" />
+  <!-- <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy"/> -->
+  <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="snowfix" />
   <project path="hardware/ril" name="platform/hardware/ril"/>
   <!-- <project path="hardware/msm7k" name="platform/hardware/msm7k" /> -->
   <project path="hardware/msm7k" name="android_hardware_msm7k" remote="cyanogen" />
@@ -115,14 +117,14 @@
   <project path="packages/apps/Calculator" name="platform/packages/apps/Calculator" />
   <project path="packages/apps/Calendar" name="platform/packages/apps/Calendar" />
   <!-- <project path="packages/apps/Camera" name="platform/packages/apps/Camera" /> -->
-  <project path="packages/apps/Camera" name="android_packages_apps_Camera" remote="cyanogen" />
+  <!-- <project path="packages/apps/Camera" name="android_packages_apps_Camera" remote="cyanogen" /> -->
   <project path="packages/apps/CertInstaller" name="platform/packages/apps/CertInstaller" />
   <!-- <project path="packages/apps/Contacts" name="platform/packages/apps/Contacts" /> -->
   <project path="packages/apps/Contacts" name="android_packages_apps_Contacts" remote="cyanogen" />
   <!-- <project path="packages/apps/DeskClock" name="platform/packages/apps/DeskClock" /> -->
   <project path="packages/apps/DeskClock" name="android_packages_apps_DeskClock" remote="cyanogen" />
   <project path="packages/apps/Email" name="platform/packages/apps/Email" />
-  <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" />
+  <!-- <project path="packages/apps/Gallery" name="platform/packages/apps/Gallery" /> -->
   <!-- <project path="packages/apps/Gallery3D" name="platform/packages/apps/Gallery3D" /> -->
   <project path="packages/apps/Gallery3D" name="android_packages_apps_Gallery3D" remote="cyanogen" />
   <project path="packages/apps/GlobalSearch" name="platform/packages/apps/GlobalSearch" />
@@ -176,8 +178,9 @@
   <project path="external/bluetooth/bluez" name="platform/external/bluetooth/bluez" />
   <project path="external/bluetooth/glib" name="platform/external/bluetooth/glib" />
   <project path="external/bluetooth/hcidump" name="platform/external/bluetooth/hcidump" />
+  <project path="external/busybox" name="android_external_busybox" remote="snowfix" revision="master" />
   <!-- <project path="external/busybox" name="android_external_busybox" remote="koush" revision="master" /> -->
-  <project path="external/busybox" name="android_external_busybox" remote="cyanogen" revision="master" />
+  <!-- <project path="external/busybox" name="android_external_busybox" remote="cyanogen" revision="master" /> -->
   <project path="external/bsdiff" name="platform/external/bsdiff" />
   <project path="external/bzip2" name="platform/external/bzip2" />
   <project path="external/clearsilver" name="platform/external/clearsilver" />
