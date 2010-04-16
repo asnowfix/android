@@ -77,7 +77,8 @@
   <project path="hardware/libhardware_legacy" name="android_hardware_libhardware_legacy" remote="snowfix" />
   <project path="hardware/ril" name="platform/hardware/ril"/>
   <!-- <project path="hardware/msm7k" name="platform/hardware/msm7k" /> -->
-  <project path="hardware/msm7k" name="android_hardware_msm7k" remote="cyanogen" />
+  <!-- <project path="hardware/msm7k" name="android_hardware_msm7k" remote="cyanogen" /> -->
+  <project path="hardware/msm7k" name="android_hardware_msm7k" remote="snowfix" />
   <project path="hardware/qcom/gps" name="platform/hardware/qcom/gps" revision="master" />
   <project path="hardware/ti/omap3" name="platform/hardware/ti/omap3" />
   <project path="hardware/ti/wlan" name="platform/hardware/ti/wlan" />
